@@ -29,16 +29,21 @@ FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\',
 - Created PDB: `li_to_delete_pdb_28753`
 - Admin User: `lisa_temp_admin`
   
-  ```sql
-  CREATE PLUGGABLE DATABASE li_to_delete_pdb_28753
+```sql
+CREATE PLUGGABLE DATABASE li_to_delete_pdb_28753
 ADMIN USER lisa_temp_admin IDENTIFIED BY temp123
 ROLES=(DBA)
 FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 'C:\APP\HP\PRODUCT\21C\ORADATA\XE\LI_TO_DELETE_PDB_28753\');
- 
-```
+``` 
+
 - ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/2ND%20DATABE%20CREATED.png?raw=true)
 - ** For Deletion
+  ```sql
+  DROP PLUGGABLE DATABASE li_to_delete_pdb_28753 INCLUDING DATAFILES;
+  ```
 - ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/drop%20plug.png?raw=true)
+
+  ISSUES 
 
 
 ### Task 3: Oracle Enterprise Manager Configuration
