@@ -54,3 +54,20 @@ FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 'C:\APP\HP\PRODU
 - ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/Screenshot%202025-10-02%20110721.png?raw=true)
 
 ### ISSUES ENCOUNTERED
+## Issues Encountered & Solutions
+
+### 🔧 Issue 1: Insufficient Privileges for PDB Operations
+- **Problem:** Received "insufficient privileges" error when trying to create and drop PDBs.
+- **Solution:** Connected to the root container with SYSDBA privileges using:
+  ```sql
+  CONNECT sys AS SYSDBA
+  ```
+
+### 🔧 Issue 2: Finding Container Names
+**Problem:** Didn't know the correct container names to switch between databases
+**Solution:** Used these commands to find containers:
+```sql
+SHOW CON_NAME
+SELECT name, con_id, open_mode FROM v$containers;
+SELECT name, open_mode FROM v$pdbs;
+```
