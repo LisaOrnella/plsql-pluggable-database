@@ -38,13 +38,17 @@ ROLES=(DBA)
 FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 
                    'C:\APP\HP\PRODUCT\21C\ORADATA\XE\PLSQL_CLASS2025DB\');
 ```
+
 **Screenshot of creating Pluggable database**
+
 -![image alt]( https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/CREATE%20DATABASE.png?raw=true)
 
 ###  Task 2: Create and Delete Temporary PDB
 - Created PDB: `li_to_delete_pdb_28753`
 - Admin User: `lisa_temp_admin`
+  
  **Screenshot of creating second Pluggable database** 
+ 
 ```sql
 CREATE PLUGGABLE DATABASE li_to_delete_pdb_28753
 ADMIN USER lisa_temp_admin IDENTIFIED BY temp123
@@ -66,9 +70,11 @@ FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 'C:\APP\HP\PRODU
 ### Task 3: Oracle Enterprise Manager Configuration
 - OEM Access: Successfully configured and accessible
 - URL: `https://localhost:5500/em`
+  
   ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/Screenshot%202025-10-02%20110721.png?raw=true)
 
 ### ISSUES ENCOUNTERED
+
 ## Issues Encountered & Solutions
 
 ### 🔧 Issue 1: Insufficient Privileges for PDB Operations
