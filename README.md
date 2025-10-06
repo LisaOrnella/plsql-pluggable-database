@@ -38,12 +38,13 @@ ROLES=(DBA)
 FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 
                    'C:\APP\HP\PRODUCT\21C\ORADATA\XE\PLSQL_CLASS2025DB\');
 ```
+**Screenshot of creating Pluggable database**
 -![image alt]( https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/CREATE%20DATABASE.png?raw=true)
 
 ###  Task 2: Create and Delete Temporary PDB
 - Created PDB: `li_to_delete_pdb_28753`
 - Admin User: `lisa_temp_admin`
-  
+ **Screenshot of creating second Pluggable database** 
 ```sql
 CREATE PLUGGABLE DATABASE li_to_delete_pdb_28753
 ADMIN USER lisa_temp_admin IDENTIFIED BY temp123
@@ -53,7 +54,7 @@ FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 'C:\APP\HP\PRODU
 
  ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/2ND%20DATABE%20CREATED.png?raw=true)
   
- **For Deletion**
+ ****Screenshot of deleting second Pluggable database****
  
   ```sql
   DROP PLUGGABLE DATABASE li_to_delete_pdb_28753 INCLUDING DATAFILES;
