@@ -18,6 +18,20 @@ including configuration of Oracle Enterprise Manager (OEM).
 - Admin User: `lisa_plsqlauca_28753`
   
 ```sql
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Oct 6 17:23:39 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+Last Successful login time: Sun Oct 05 2025 22:33:10 +02:00
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+
 CREATE PLUGGABLE DATABASE plsql_class2025db
 ADMIN USER lisa_plsqlauca_28753 IDENTIFIED BY password
 ROLES=(DBA)
@@ -37,21 +51,21 @@ ROLES=(DBA)
 FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 'C:\APP\HP\PRODUCT\21C\ORADATA\XE\LI_TO_DELETE_PDB_28753\');
 ``` 
 
-- ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/2ND%20DATABE%20CREATED.png?raw=true)
+ ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/2ND%20DATABE%20CREATED.png?raw=true)
   
  **For Deletion**
  
   ```sql
   DROP PLUGGABLE DATABASE li_to_delete_pdb_28753 INCLUDING DATAFILES;
   ```
-- ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/drop%20plug.png?raw=true)
+ ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/drop%20plug.png?raw=true)
 
 
 
 ### Task 3: Oracle Enterprise Manager Configuration
 - OEM Access: Successfully configured and accessible
 - URL: `https://localhost:5500/em`
-- ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/Screenshot%202025-10-02%20110721.png?raw=true)
+  ![image alt](https://github.com/LisaOrnella/plsql-pluggable-database/blob/main/Screenshot%202025-10-02%20110721.png?raw=true)
 
 ### ISSUES ENCOUNTERED
 ## Issues Encountered & Solutions
@@ -70,4 +84,12 @@ FILE_NAME_CONVERT=('C:\APP\HP\PRODUCT\21C\ORADATA\XE\PDBSEED\', 'C:\APP\HP\PRODU
 SHOW CON_NAME
 SELECT name, con_id, open_mode FROM v$containers;
 SELECT name, open_mode FROM v$pdbs;
+```
+### 🔧 Issue 3: PDB Not Accessible
+**Problem:** PDBs created but couldn't connect to them
+**Solution:** Opened PDBs after creation:
+```sql
+SHOW CON_NAME
+SELECT name, con_id, open_mode FROM v$containers;
+SELECT name, open_mode FROM v$pdbs;
 ```
