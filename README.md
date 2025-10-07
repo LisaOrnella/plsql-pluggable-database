@@ -3,9 +3,10 @@
 
 - **Name:** Lisa Ornella UWASE
 - **Student ID:** 28753
+- **TUESDAY CLASS GROUP B**
 - **Username:** lisa_plsqlauca_28753
 - **Database:** Oracle 21c XE
-- **Lecture:** Eric
+- **Lecture:** Eric Maniraguha
 
 ## Assignment Overview
 This project demonstrates the creation and management of Pluggable Databases (PDBs) in Oracle Database, 
